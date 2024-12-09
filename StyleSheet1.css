@@ -1,0 +1,478 @@
+﻿body {
+    margin: 0 auto;
+}
+
+*, ::after, ::before {
+    box-sizing: border-box;
+}
+
+header {
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    /*çizginin boyu*/
+    background-color: #d0bfbf;
+    position: sticky;
+    /*position görünmez çizgi oluşturur divi ayırır
+        sticky kaydırdıgımızda yukarıda bırakır
+    */
+}
+
+    header .header-description {
+        max-height: 40px;
+        /* yazı ortada kalsın*/
+        width: 60%;
+        float: left;
+        /*sola daya*/
+    }
+
+        header .header-description small {
+            color: #fff;
+            font-size: 40px;
+            font-style: italic;
+            font-weight: bold;
+            padding-left: 55px;
+            margin: 20px,0,0,0;
+            color: black;
+            /*içerden dısarıya 40px bosluk*/
+        }
+
+    header .authentication-link {
+        width: 40%;
+        /*%40 dan geriye %60 kaldı onu da buna 
+            verdik
+        */
+        float: right;
+        /*sağa yasla*/
+        max-height: 40px;
+    }
+
+        header .authentication-link.ul {
+            list-style: none;
+            /*basındaki yuvarlakları sil*/
+            padding: 0;
+            float: right;
+            margin: 0 10% 0 0;
+            /*margin dısarıdaki elemenlerin birbirine
+        olan uzaklığı. saat yönünde gider.
+        üstten sagdan alttan soldan
+        paddingde de aynı sıralama
+        */
+        }
+
+        header .authentication-link ul li {
+            display: inline-block;
+            /*aynı satırda yan yana getir*/
+            line-height: 25px;
+            border-right: 1px solid #fff;
+            /*her birinin yanında 1px düz(solid)
+            beyaz çizgi
+        */
+            padding-right: 20px;
+            /* çizgiyle 20 px çizgi*/
+            padding-left: 20px;
+        }
+
+            header .authentication-link ul li:last-child {
+                border-right: unset;
+                /*son cocuga çizgi verme*/
+                padding-right: unset;
+            }
+
+            header .authentication-link ul li a {
+                text-decoration: none;
+                /*alttaki çizgiyi siler*/
+                color: #000;
+                font-weight: bold;
+                letter-spacing: 0.09em;
+                /*harflerin aralarındaki boslugu acar*/
+            }
+
+                header .authentication-link ul li a:hover {
+                    /* a nın üzerine geldiğimde*/
+                    color: white;
+                }
+
+nav {
+    position: relative;
+    width: 100%;
+    padding: 0,0;
+    background: #0e223f;
+    height: 90px;
+}
+
+    nav .logo {
+        position: relative;
+        width: 30%;
+        float: left;
+        height: 90px;
+    }
+
+        nav .logo img {
+            height: 65px;
+            position: absolute;
+            margin: 0;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+        }
+
+    nav .menü {
+        width: 70%;
+        float: left;
+        height: 90px;
+    }
+
+        nav .menü ul {
+            list-style: none;
+            padding: 0;
+            max-height: 90px;
+            line-height: 90px;
+            text-align: center;
+            margin: 0 auto;
+        }
+
+            nav .menü ul li {
+                display: inline-block;
+                border-right: 1px solid#fff;
+                line-height: 30px;
+            }
+
+                nav .menü ul li:last-child {
+                    border-right: unset;
+                }
+
+                nav .menü ul li a {
+                    text-decoration: none;
+                    color: white;
+                    font-size: 20px;
+                    padding: 0 20px;
+                    /* padding iki değer verirsek
+                    ilki hem yukardan asagıdan ikinci hem
+                    sagdan hem soldan
+                */
+                }
+
+a .active {
+    color: grey !important;
+    /*aktif ekranın üstü gri olur
+                        important ezilmemesi için
+                    */
+}
+
+nav .menü ul li a:hover {
+    color: black;
+}
+
+aside {
+    position: relative;
+    width: 15%;
+    float: left;
+    background-color: white;
+    height: calc(100vh - 210px);
+    /*nav bar,header ve footer 210px
+                        hepside 100vh kalanı aside olsun
+                    */
+}
+
+.typechekbox {
+    border-bottom: 1px solid grey;
+    padding: 15px;
+}
+
+aside left-menü {
+    width: 60%;
+    margin: 0 auto;
+}
+
+aside .left-menü h2 {
+    margin: 20px 0;
+    text-align: center;
+}
+
+aside .left-menü ul {
+    list-style: none;
+    margin: 20px auto 0;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    padding-inline-start: 0;
+}
+
+    aside .left-menü ul li {
+        text-align: left;
+        margin: 0 auto 10px;
+        /*aralarını açar auto ortalar*/
+    }
+
+        aside .left-menü ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 20px;
+            padding: 0 20px;
+        }
+
+            aside .left-menü ul li a:hover {
+                color: black;
+                border-bottom: 1px solid blue;
+                border-bottom-width: initial;
+            }
+
+.text-center {
+    text-align: center;
+}
+
+main {
+    position: relative;
+    width: 100%;
+    height: calc(100vh-210px);
+}
+
+    main .row {
+        display: flex;
+        flex-wrap: wrap;
+        /*sıgmayan yerleri keserek satırlaştırır getir*/
+    }
+
+    main .card1 {
+        flex: 0 0 auto;
+        width: 25%;
+        margin: 0 auto 10px;
+        padding: 10px 10px;
+    }
+
+    main .card2 {
+        flex: 0 0 auto;
+        width: 25%;
+        margin: 0 auto 10px;
+        padding: 10px 10px;
+    }
+
+    main .card3 {
+        flex: 0 0 auto;
+        width: 25%;
+        margin: 0 auto 10px;
+        padding: 10px 10px;
+    }
+
+    main .card4 {
+        flex: 0 0 auto;
+        width: 25%;
+        margin: 0 auto 10px;
+        padding: 10px 10px;
+    }
+
+
+footer {
+    position: relative;
+    float: left;
+    width: 100%;
+    height: 80px;
+    line-height: 40px;
+}
+
+    footer .row {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    footer .sosyal-medya {
+        background-color: black;
+        width: 33.333%;
+    }
+
+        footer .sosyal-medya h5 {
+            text-align: center;
+            color: white;
+        }
+
+        footer .sosyal-medya ul {
+            text-align: center;
+            list-style: none;
+            margin: 20px auto 0;
+            margin-block-start: 0;
+            margin-block-end: 0;
+            padding-inline-start: 0;
+        }
+
+    footer .sosya-medya ul li {
+        position: relative;
+        text-align: left;
+        margin: 0 auto 10px;
+    }
+
+    footer .sosyal-medya ul li a {
+        text-decoration: none;
+        color: white;
+        font-size: 20px;
+        padding: 0 20px;
+    }
+
+        footer .sosyal-medya ul li a:hover {
+            color: white;
+            border-bottom: 1px solid blue;
+            border-bottom-width: initial;
+        }
+
+    footer .iletişim {
+        background-color: black;
+        width: 33.33%
+    }
+
+        footer .iletişim h5 {
+            color: white;
+            text-align: center;
+        }
+
+        footer .iletişim ul {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            list-style: none;
+            margin: 20px auto 0;
+            margin-block-start: 0;
+            margin-block-end: 0;
+            padding-inline-start: 0;
+        }
+
+            footer .iletişim ul li {
+                color: white;
+                position: relative;
+                text-align: left;
+                margin: 0 auto 10px
+            }
+
+    footer .Neden {
+        background-color: black;
+        width: 33.33%;
+    }
+
+        footer .Neden p {
+            padding: 15px;
+            color: white;
+        }
+
+.col-12 {
+    flex: 0 0 auto;
+    width: 100%;
+    max-width: 100%;
+}
+
+.col-6 {
+    flex: 0 0 auto;
+    width: 50%;
+    max-width: 50%;
+}
+
+.col-4 {
+    flex: 0 0 auto;
+    width: 33.333%;
+    max-width: 100%;
+}
+
+.col-3 {
+    flex: 0 0 auto;
+    width: 25%;
+    max-width: 100%;
+}
+
+.border-1 {
+    border: 1px solid red;
+}
+
+form .register {
+    width: 50%;
+    margin: 0 auto;
+    /*ortalar birincisi üstten alttan ikincisi
+                            sağdan soldan eşitler
+                        */
+}
+
+form input {
+    flex: 0 0 auto;
+    width: 100%;
+    border-color: #808080;
+    border-radius: 5px;
+    /*kenarlar yuvarlanır*/
+    padding: 5px;
+    /*input cercevesini genişletir*/
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+    /* inputa tıkladıgımızda cevresinde golge border oluşturur bunun kaç saniyede olucagını bildirir
+                            ease in out içerden dısarı olur anlamını verir
+                        */
+    background-color: azure;
+    background-clip: padding-box;
+    /* yazının arkdasına cerceve yapar gereksiz silinebilir*/
+    line-height: 1.5;
+    margin-top: 10px;
+    /* inputla ad, soyad yazısını ayırır*/
+}
+
+form label {
+    letter-spacing: 0.09em;
+    /* harfler arasındaki boslugu açar*/
+}
+
+input:focus {
+    outline: 0;
+    box-shadow: 0 0 0 0.05rem;
+    /* inputun içine girdiğimizde* çerçevenin etrafı renklenir*/
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+.btn-register {
+    border-radius: 5px;
+    border: 1px solid grey;
+    font-weight: bold;
+    letter-spacing: 0.05em;
+    /* harflerin araları aç*/
+    padding: 5px;
+    width: 100%;
+}
+
+    .btn-register:hover {
+        cursor: pointer;
+    }
+
+.radio {
+    padding: 1px;
+    height: 40px;
+}
+
+    .radio p {
+        padding-inline: 2px;
+        margin: 4px;
+    }
+
+
+
+
+
+.aboutus {
+    padding-top: 50px;
+    padding-left: 100px;
+    padding-right: 70px;
+    padding-bottom: 80px;
+    margin-top: 30px;
+    margin-left: 230px;
+    margin-right: 30px;
+    margin-bottom: 130px;
+    border-style: groove;
+    border-width: 5px;
+}
+
+.konum {
+    padding-left: 210px;
+    padding-bottom: 20px;
+}
+
+.container {
+    display: flex; /* Flexbox düzeni */
+    justify-content: space-between; /* Elemanlar arasına boşluk ekler (isteğe bağlı) */
+}
+
+.konumhead {
+    padding-top: 150px;
+}

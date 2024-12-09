@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace Comecar
 {
-    public partial class contact : System.Web.UI.Page
+    public partial class about_us : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {

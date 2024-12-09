@@ -11,7 +11,7 @@ namespace Comecar
 {
 
 
-    public partial class contact
+    public partial class register
     {
 
         /// <summary>
