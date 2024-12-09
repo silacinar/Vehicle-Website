@@ -43,11 +43,7 @@
             </ul>
         </div>
     </nav>
-    <aside>
-        <div class="left-menü">
-            
-        </div>
-    </aside>
+   
     <main>
 
         <article>

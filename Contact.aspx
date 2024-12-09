@@ -43,24 +43,12 @@
           </ul>
       </div>
     </nav>
-    <aside>
-        <div class="container">
-        <div class="left-menü">
-            <h2>Kategoriler</h2>
-            <ul>
-                <li> <a href="otomobil.html">Otomobil</a></li>
-                <li> <a href="suv.html"> Suv</a></li>
-                <li> <a href="motorsiklet.html">Motorsiklet</a></li>
-            </ul>
-        </div>
-            </div>
-
-    </aside>
+   
     <main>
         <h1 class="konumhead" style="text-align:center"> CONTACT INFORMATION </h1>
-     <div class="container">
+     <div class="container2">
         <div class="konum">
-       <img src="assets/img/Konum.png" width="550px" height="230px" alt="Comecar Location"/>
+       <img src="map.png" width="550px" height="230px" alt="Comecar Location"/>
             </div>
         <div class="konum">
             Ataşehir Atatürk Mah. Ataşehir Bulv. 3 Cad. No:7 Atatürk, 34758 Ataşehir/İstanbul, Türkiye

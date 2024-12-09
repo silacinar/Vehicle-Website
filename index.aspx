@@ -96,7 +96,7 @@
                             <li>HASAR KAYDI:1200</li>
                         </ul>
                     </p>
-                    <a href="" class="btn btn-primary">Ilana Git</a>
+                    <a href="" class="btn btn-secondary">Ilana Git</a>
                 </div>
             </div>
             <div class="card card2">
@@ -110,7 +110,7 @@
                             <li>HASAR KAYDI:56.000</li>
                         </ul>
                     </p>
-                    <a href="assets/img/a3" class="btn btn-primary">Ilana Git</a>
+                    <a href="assets/img/a3" class="btn btn-secondary">Ilana Git</a>
                 </div>
             </div>
             <div class="card card3">
@@ -118,7 +118,7 @@
                 <div class="card-body">
                     <h5 class="card-title">Card title</h5>
                     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                    <a href="#" class="btn btn-secondary">Go somewhere</a>
                 </div>
             </div>
             <div class="card card4">
@@ -126,7 +126,7 @@
                 <div class="card-body">
                     <h5 class="card-title">Card title</h5>
                     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                    <a href="#" class="btn btn-secondary">Go somewhere</a>
                 </div>
             </div>
 
