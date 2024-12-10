@@ -43,12 +43,7 @@
             </ul>
         </div>
     </nav>
-    <aside>
-
-        
-
-    </aside>
-
+   
     <main>
         <div class="aboutus">
             As the Comecar family, we carry out your fast and secure buying and selling transactions!
