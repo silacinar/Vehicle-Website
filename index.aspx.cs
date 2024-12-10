@@ -17,8 +17,22 @@ namespace Comecar
             if (!IsPostBack) // Sayfa ilk kez yüklendiğinde çalışacak
             {
                 // Veritabanına bağlanarak vehicle verilerini çekme
-                string connectionString = "Server=DESKTOP-8D8OQ9R;Database=COMECAR;Integrated Security=True;";
-                string query = "SELECT * FROM VEHICLES"; // vehicles tablosundaki tüm veriler
+                string connectionString = "Server=HP\\SQLEXPRESS;Database=COMECAR;Integrated Security=True;";
+                string query = @"
+                SELECT 
+                    V.V_ID, 
+                    B.BRAND_NAME, 
+                    C.COLOUR_NAME, 
+                    I.IMAGE1
+                FROM 
+                    VEHICLES V
+                JOIN 
+                    BRANDS B ON V.BRAND_ID = B.B_ID
+                JOIN 
+                    COLOURS C ON V.COLOURS_ID = C.C_ID
+                JOIN
+                    IMAGE I ON V.IMAGE = I.I_ID";
+                // vehicles tablosundaki tüm veriler
 
                 using (SqlConnection conn = new SqlConnection(connectionString))
                 {
@@ -29,9 +43,9 @@ namespace Comecar
                     // Verileri HTML kartlarına yerleştirme
                     foreach (DataRow row in dt.Rows)
                     {
-                        string vehicleName = row["BRAND_ID"].ToString(); // Örnek sütun adı
-                        string vehicleModel = row["COLOURS_ID"].ToString(); // Örnek sütun adı
-                        string vehicleImage = row["IMAGE"].ToString(); // Örnek sütun adı
+                        string vehicleName = row["BRAND_NAME"].ToString(); // Örnek sütun adı
+                        string vehicleModel = row["COLOUR_NAME"].ToString(); // Örnek sütun adı
+                        string vehicleImage = row["IMAGE1"].ToString(); // Örnek sütun adı
 
                         // Kartı dinamik olarak oluşturma
                         string cardHtml = $@"
@@ -39,7 +53,7 @@ namespace Comecar
                         <div class='card-body'>
                             <h5 class='card-title'>{vehicleName}</h5>
                             <p class='card-text'>{vehicleModel}</p>
-                            <p class='card-text'>{vehicleImage}</p>
+                             <img src='{vehicleImage}' alt='{vehicleName}' class='card-img-top' />
                         </div>
                     </div>";
 

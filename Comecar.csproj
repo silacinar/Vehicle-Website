@@ -100,6 +100,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="about_us.aspx" />
+    <Content Include="car_profile.aspx" />
     <Content Include="contact.aspx" />
     <Content Include="Content\bootstrap-grid.css" />
     <Content Include="Content\bootstrap-grid.min.css" />
@@ -199,6 +200,13 @@
     </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="car_profile.aspx.cs">
+      <DependentUpon>car_profile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="car_profile.aspx.designer.cs">
+      <DependentUpon>car_profile.aspx</DependentUpon>
+    </Compile>
     <Compile Include="contact.aspx.cs">
       <DependentUpon>contact.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -269,6 +277,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="img\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
