@@ -168,8 +168,11 @@ aside {
     position: relative;
     width: 15%;
     float: left;
-    background-color: white;
+    background-color:#eeecec;
     height: calc(100vh - 210px);
+    border-bottom: 5px solid grey;
+    margin:30px;
+    padding:15px;
     /*nav bar,header ve footer 210px
                         hepside 100vh kalanı aside olsun
                     */
@@ -183,39 +186,11 @@ aside {
 aside left-menü {
     width: 60%;
     margin: 0 auto;
+   
+    
 }
 
-aside .left-menü h2 {
-    margin: 20px 0;
-    text-align: center;
-}
 
-aside .left-menü ul {
-    list-style: none;
-    margin: 20px auto 0;
-    margin-block-start: 0;
-    margin-block-end: 0;
-    padding-inline-start: 0;
-}
-
-    aside .left-menü ul li {
-        text-align: left;
-        margin: 0 auto 10px;
-        /*aralarını açar auto ortalar*/
-    }
-
-        aside .left-menü ul li a {
-            text-decoration: none;
-            color: white;
-            font-size: 20px;
-            padding: 0 20px;
-        }
-
-            aside .left-menü ul li a:hover {
-                color: black;
-                border-bottom: 1px solid blue;
-                border-bottom-width: initial;
-            }
 
 .text-center {
     text-align: center;
@@ -480,3 +455,10 @@ button:hover {
     padding-letf:50px;
 }
 
+.filtre {
+    border: 5px solid grey;
+    border-radius: 5px;
+    margin: 30px;
+    padding: 15px;
+    background-color: #eeecec;
+}

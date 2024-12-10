@@ -29,7 +29,7 @@
             <small>
                 Come Car
             </small>
-            <small style="font-size:15px">Hızlı Alım Hızlı Satım</small>
+            <small style="font-size:15px">Fast Buy Fast Sell</small>
         </div>
         <div class="authentication-link">
             <ul>
@@ -37,7 +37,7 @@
                     <a href="login.hmtl"> Log In<sub>(for salers)</sub></a>
                 </li>
                 <li>
-                    <a href="register.aspx"> Araba Ekle</a>
+                    <a href="register.aspx"> Add Vehicle</a>
                 </li>
             </ul>
         </div>
@@ -51,16 +51,16 @@
         <div class="menü">
             <ul>
                 <li>
-                    <a href="index.aspx" class="active">Anasayfa</a>
+                    <a href="index.aspx" class="active">Home Page</a>
                 </li>
                 <li>
-                    <a href="about_us.aspx">Hakkimizda</a>
+                    <a href="about_us.aspx">About Us</a>
                 </li>
                 <li>
-                    <a href="Salers.aspx">Satıcılar</a>
+                    <a href="Salers.aspx">Salers</a>
                 </li>
                 <li>
-                    <a href="contact.aspx">Iletisim</a>
+                    <a href="contact.aspx">Contact</a>
                 </li>
             </ul>
         </div>
@@ -87,7 +87,7 @@
 </aside>
     <main>
       <div class="container">
-        <h1>Vehicles List</h1>
+        <h1 style="text-align:center;">Vehicles List</h1>
         
         <!-- Burada dinamik olarak kartlar yüklenecek -->
         <asp:PlaceHolder ID="vehiclesPlaceholder" runat="server"></asp:PlaceHolder>

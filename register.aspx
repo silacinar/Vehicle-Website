@@ -19,12 +19,12 @@
             <small>
                 Come Car
             </small>
-            <small style="font-size:15px">Hızlı Alım Hızlı Satım</small>
+            <small style="font-size:15px">Fast Buy Fast Sell</small>
         </div>
         <div class="authentication-link">
             <ul>
                 <li><a href="login.hmtl"> Log In<sub>(for salers)</sub></a></li>
-                <li><a href="register.aspx">Araç ekle</a></li>
+                <li><a href="register.aspx">Add Vehicle</a></li>
             </ul>
         </div>
 
@@ -36,10 +36,10 @@
         </div>
         <div class="menü">
             <ul>
-                <li><a href="index.aspx" class="active">Anasayfa</a></li>
-                <li><a href="about_us.aspx">Hakkimizda</a></li>
-                <li><a href="Salers.aspx">Saticilar</a></li>
-                <li><a href="contact.aspx">Iletisim</a></li>
+                <li><a href="index.aspx" class="active">Home Page</a></li>
+                <li><a href="about_us.aspx">About Us</a></li>
+                <li><a href="Salers.aspx">Salers</a></li>
+                <li><a href="contact.aspx">Contact</a></li>
             </ul>
         </div>
     </nav>
@@ -47,287 +47,154 @@
 
     <main>
         <article>
-            <h1 class="text-center">Araba Ekle</h1>
-            <form action="index.html" method="" enctype="multipart/form-data" class="register">
-                <!-- action boşsa aynı sayfaya yönlendirir
-                method defaultda gettir
-                enctype formla birlikte resim yollamamızı sağlar
-                novalidate yanlıs girilen bilgileri uyarmaz örnek email yerine telno girersek uyarmaz-->
-                <section class="row">
-                    <div class="col-6 ">
-                        <label for="name">Ad</label>
-                        <!-- giriş alanı oluşturur-->
-                        <!-- for ile id aynı olması lazım bunun sebebi
-        ad ın üstüne basınca otomatik trxte girer-->
-                        <input type="text" id="name" placeholder="Adınızı Girin" />
+           
 
-                    </div>
-                    <div class="col-6 ">
-                        <label for="LastNAme">Soyad</label>
-                        <input type="text" id="LastName" placeholder="Soyadınızı Girin" />
-
-                    </div>
-
-                    <div class="accordion col-6" id="accordionPanelsStayOpenExample" style="padding:15px;">
-                        <div class="accordion-item ">
-                            <h2 class="accordion-header">
-                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
-                                    Brands
-                                </button>
-                            </h2>
-                            <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show">
-                                <div class="accordion-body">
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                                        <label class="form-check-label" for="flexRadioDefault1">
-                                            Mercedes
-                                        </label>
-                                    </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
-                                        <label class="form-check-label" for="flexRadioDefault2">
-                                            Bmw
-                                        </label>
-                                    </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                                        <label class="form-check-label" for="flexRadioDefault1">
-                                            volkswagen
-                                        </label>
-                                    </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                                        <label class="form-check-label" for="flexRadioDefault1">
-                                            Kia
-                                        </label>
-                                    </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                                        <label class="form-check-label" for="flexRadioDefault1">
-                                            Seat
-                                        </label>
-                                    </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                                        <label class="form-check-label" for="flexRadioDefault1">
-                                            Skoda
-                                        </label>
-                                    </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                                        <label class="form-check-label" for="flexRadioDefault1">
-                                            Reanult
-                                        </label>
-                                    </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                                        <label class="form-check-label" for="flexRadioDefault1">
-                                            Opel
-                                        </label>
-                                    </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                                        <label class="form-check-label" for="flexRadioDefault1">
-                                            Volvo
-                                        </label>
-                                    </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                                        <label class="form-check-label" for="flexRadioDefault1">
-                                            Vespa
-                                        </label>
-                                    </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                                        <label class="form-check-label" for="flexRadioDefault1">
-                                            Honda
-                                        </label>
-                                    </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                                        <label class="form-check-label" for="flexRadioDefault1">
-                                            kawasaki
-                                        </label>
-                                    </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                                        <label class="form-check-label" for="flexRadioDefault1">
-                                            Kuba
-                                        </label>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="accordion col-6 " id="accordionPanelsStayOpenExample" style="padding:15px;">
-                        <div class="accordion-item ">
-                            <h2 class="accordion-header">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
-                                    Vehicle Type
-                                </button>
-                            </h2>
-                            <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse">
-                                <div class="accordion-body">
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                                        <label class="form-check-label" for="flexRadioDefault1">
-                                            Car
-                                        </label>
-                                    </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                                        <label class="form-check-label" for="flexRadioDefault1">
-                                            Suv
-                                        </label>
-                                    </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                                        <label class="form-check-label" for="flexRadioDefault1">
-                                            MotorCycle
-                                        </label>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="accordion col-6 " id="accordionPanelsStayOpenExample" style="padding:15px;">
-                        <div class="accordion-item ">
-                            <h2 class="accordion-header">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
-                                    Vehicle Type
-                                </button>
-                            </h2>
-                            <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse">
-                                <div class="accordion-body">
-                                    <div class="form-check col-6">
-                                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                                        <label class="form-check-label" for="flexRadioDefault1">
-                                            Black
-                                        </label>
-                                    </div>
-                                    <div class="form-check col-6">
-                                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                                        <label class="form-check-label" for="flexRadioDefault1">
-                                            White
-                                        </label>
-                                    </div>
-                                    <div class="form-check col-6">
-                                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                                        <label class="form-check-label" for="flexRadioDefault1">
-                                           Grey
-                                        </label>
-                                    </div>
-                                    <div class="form-check col-6">
-                                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                                        <label class="form-check-label" for="flexRadioDefault1">
-                                            Blue
-                                        </label>
-                                    </div>
-                                    <div class="form-check col-6">
-                                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                                        <label class="form-check-label" for="flexRadioDefault1">
-                                            Red
-                                        </label>
-                                    </div>
-                                    <div class="form-check col-6">
-                                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                                        <label class="form-check-label" for="flexRadioDefault1">
-                                            Green
-                                        </label>
-                                    </div>
-
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="radio_ col-6">
-                        <p>Fuel Type</p>
-                        <div class="form-check col-6">
-                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                            <label class="form-check-label" for="flexRadioDefault1">
-                                Gasoline
-                            </label>
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
-                            <label class="form-check-label" for="flexRadioDefault2">
-                                Diesel
-                            </label>
-                        </div>
-                        <div class="form-check col-6">
-                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                            <label class="form-check-label" for="flexRadioDefault3">
-                                Hybrid
-                            </label>
-                        </div>
-                        <div class="form-check col-6">
-                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                            <label class="form-check-label" for="flexRadioDefault4">
-                                Electric
-                            </label>
-                        </div>
-                    </div>
-                    <div class="col-6">
-                        <p> Vehicle Type</p>
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                            <label class="form-check-label" for="flexRadioDefault1">
-                                Car
-                            </label>
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                            <label class="form-check-label" for="flexRadioDefault1">
-                                Suv
-                            </label>
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                            <label class="form-check-label" for="flexRadioDefault1">
-                                MotorCycle
-                            </label>
-                        </div>
-                    </div>
+                
                    
+                   
+                  <div class="filtre">
+     <div class="left-menü row">
+     <h1 style="text-align:center; border-bottom: 1px solid grey; padding: 15px;">Add Vehicle</h1>
+     <div class="typechekbox col-6">
+         <h5> Brands</h5>
+         <input type="checkbox">
+         <label>Mercedes</label>
+         <input type="checkbox">
+         <label>Bmv</label>
+         <input type="checkbox">
+         <label>Audi</label>
+         <input type="checkbox">
+         <label>Volkswagen</label>
+         <input type="checkbox">
+         <label>Kıa</label>
+         <input type="checkbox">
+         <label>Seat</label>
+         <input type="checkbox">
+         <label>Skoda</label>
+         <input type="checkbox">
+         <label>Renault</label>
+         <input type="checkbox">
+         <label>Opel</label>
+         <input type="checkbox">
+         <label>Volvo</label>
+         <input type="checkbox">
+         <label>Vespa</label>
+         <input type="checkbox">
+         <label>Honda</label>
+         <input type="checkbox">
+         <label>Kawasakı</label>
+         <input type="checkbox">
+         <label>Kuba</label>
+     </div>
+     <div class="typechekbox col-6">
+         <h5> Color</h5>
+         <input type="checkbox">
+         <label>Black</label>
+         <input type="checkbox">
+         <label>White</label>
+         <input type="checkbox">
+         <label>Blue</label>
+         <input type="checkbox">
+         <label>Green</label>
+         <input type="checkbox">
+         <label>Grey</label>
+         <input type="checkbox">
+         <label>Red</label>
+
+     </div>
+     <div class="typechekbox col-6">
+         <h5> Fuel Type</h5>
+         <input type="checkbox">
+         <label>Gasoline</label>
+         <input type="checkbox">
+         <label>Diesel</label>
+         <input type="checkbox">
+         <label>Hybrid</label>
+         <input type="checkbox">
+         <label>Electric</label>
+
+
+     </div>
+     <div class="typechekbox col-6">
+         <h5> Gear Type</h5>
+         <input type="checkbox">
+         <label>Automatic</label>
+         <input type="checkbox">
+         <label>Manuel</label>
+         <input type="checkbox">
+         <label>Triptronic</label>
+
+
+
+     </div>
+     <div class="typechekbox col-6">
+         <h5> Vehicle Type</h5>
+         <input type="checkbox">
+         <label>Car</label>
+         <input type="checkbox">
+         <label>Suv</label>
+         <input type="checkbox">
+         <label>Motorcycle</label>
+
+
+
+     </div>
+     <div class="typechekbox col-6">
+         <h5> Saler</h5>
+         <input type="checkbox">
+         <label>Yaren Beren Öztürk</label>
+         <input type="checkbox">
+         <label>Sila Güler Cinar</label>
+         <input type="checkbox">
+         <label>Hakan Alaybeyoglu</label>
+         <input type="checkbox">
+         <label>Kagan Alaybeyoglu</label>
+
+
+
+     </div>
+           <div class="col-6 ">
+      <label for="yıl">Yıl</label>
+      <input type="text" id="Yıl" placeholder="Yıl Girin" />
+
+  </div>
+  <div class="col-6 ">
+      <label for="km">Kilometre</label>
+      <input type="text" id="km" placeholder="Kilometre Girin" />
+
+  </div>
+
+
+
+  <div class="col-6 ">
+      <label for="hasarkaydı">Hasar Kaydı</label>
+      <input type="text" id="hasarkaydı" placeholder="Hasar Kaydı Girin" />
+
+  </div>
+  <div class="col-6 ">
+      <label for="fiyat">Fiyat</label>
+      <input type="text" id="fiyat" placeholder="Fiyat Girin" />
+
+  </div>
+
+
+ <button type="button" class="btn btn-secondary col-12" style="mask-size:100%;"
+        style="--bs-btn-padding-y: .45rem; --bs-btn-padding-x: .1rem; --bs-btn-font-size: .75rem;">
+    Add Vehicle
+</button>
+
+
+     
+ </div>
+         
+ </div>
 
 
 
 
-                    <div class="col-6 ">
-                        <label for="yıl">Yıl</label>
-                        <input type="text" id="Yıl" placeholder="Yıl Girin" />
+                  
 
-                    </div>
-                    <div class="col-6 ">
-                        <label for="km">Kilometre</label>
-                        <input type="text" id="km" placeholder="Kilometre Girin" />
-
-                    </div>
-
-
-
-                    <div class="col-6 ">
-                        <label for="hasarkaydı">Hasar Kaydı</label>
-                        <input type="text" id="hasarkaydı" placeholder="Hasar Kaydı Girin" />
-
-                    </div>
-                    <div class="col-6 ">
-                        <label for="fiyat">Fiyat</label>
-                        <input type="text" id="fiyat" placeholder="Fiyat Girin" />
-
-                    </div>
-
-
-                    <div class="col-12 ">
-                        <button type="submit">Kaydet</button>
-                        <!-- submite bastıgımda actionda yazan yere yollar-->
-                    </div>
-
-
-                </section>
-            </form>
-
+              
         </article>
     </main>
     <footer>

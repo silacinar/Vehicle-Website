@@ -19,12 +19,12 @@
             <small>
                 Come Car
             </small>
-            <small style="font-size:15px">Hızlı Alım Hızlı Satım</small>
+            <small style="font-size:15px">Fast Buy Fast Sell</small>
         </div>
         <div class="authentication-link">
             <ul>
                 <li><a href="login.hmtl"> Log In<sub>(for salers)</sub></a></li>
-                <li><a href="register.aspx"> Araba Ekle</a></li>
+                <li><a href="register.aspx"> Add Vehicle</a></li>
             </ul>
         </div>
 
@@ -36,10 +36,10 @@
         </div>
         <div class="menü">
             <ul>
-                <li><a href="index.aspx" class="active">Anasayfa</a></li>
-                <li><a href="about_us.aspx">Hakkimizda</a></li>
-                <li><a href="Salers.aspx">Saticilar</a></li>
-                <li><a href="contact.aspx">Iletisim</a></li>
+                <li><a href="index.aspx" class="active">Home Page</a></li>
+                <li><a href="about_us.aspx">About Us</a></li>
+                <li><a href="Salers.aspx">Salers</a></li>
+                <li><a href="contact.aspx">Contact</a></li>
             </ul>
         </div>
     </nav>
@@ -58,7 +58,7 @@
                         <div class="card-body">
                             <h5 class="card-title">YAREN ÖZTÜRK</h5>
                             <p class="card-text">+90 553 984 1545 <br/>  efd@efd </p>
-                            <a href="YarenSa.html" class="card-link">Satıştaki Arabaları</a>
+                            <a href="YarenSa.aspx" class="card-link">Satıştaki Arabaları</a>
                         </div>
                     </div>
                 </div>
@@ -68,7 +68,7 @@
                         <div class="card-body">
                             <h5 class="card-title">HAKAN ALAYBEYOĞLU</h5>
                             <p class="card-text">+90 532 237 8392 <br/>  klm@klm </p>
-                            <a href="HakanSa.hmtl" class="card-link">Satıştaki Arabaları</a>
+                            <a href="HakanSa.aspx" class="card-link">Satıştaki Arabaları</a>
                         </div>
                     </div>
                 </div>
@@ -78,7 +78,7 @@
                         <div class="card-body">
                             <h5 class="card-title">SILA ÇINAR</h5>
                             <p class="card-text">+90 538 939 8435 <br />  cdb@cdb </p>
-                            <a href="SilaSa.html" class="card-link">Satıştaki Arabaları</a>
+                            <a href="SilaSa.aspx" class="card-link">Satıştaki Arabaları</a>
                         </div>
                     </div>
                 </div>
@@ -88,7 +88,7 @@
                         <div class="card-body">
                             <h5 class="card-title">KAĞAN ALAYBEYOĞLU</h5>
                             <p class="card-text">+90 532 322 4095 <br />  abc@abc </p>
-                            <a href="KaganSa.html" class="card-link">Satıştaki Arabaları</a>
+                            <a href="KaganSa.aspx" class="card-link">Satıştaki Arabaları</a>
                         </div>
                     </div>
                 </div>

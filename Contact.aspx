@@ -20,12 +20,12 @@
             Come Car
 
         </small >
-        <small style="font-size:15px" >Hızlı Alım Hızlı Satım</small> 
+        <small style="font-size:15px" >Fast Buy Fast Sell</small> 
     </div>
     <div class="authentication-link">
         <ul>
             <li><a href="login.hmtl"> Log In<sub>(for salers)</sub></a></li>
-            <li><a href="register.aspx"> Araba Ekle</a></li>
+            <li><a href="register.aspx"> Add Vehicle</a></li>
         </ul>
     </div>
 
@@ -37,10 +37,10 @@
       </div>
       <div class="menü">
           <ul>
-              <li><a href="index.aspx" class="active">Anasayfa</a></li>
-              <li><a href="about_us.aspx">Hakkimizda</a></li>
-              <li><a href="Salers.aspx">Saticilar</a></li>
-              <li><a href="contact.aspx">Iletisim</a></li>
+              <li><a href="index.aspx" class="active">Home Page</a></li>
+              <li><a href="about_us.aspx">About Us</a></li>
+              <li><a href="Salers.aspx">Salers</a></li>
+              <li><a href="contact.aspx">Contact</a></li>
           </ul>
       </div>
     </nav>
