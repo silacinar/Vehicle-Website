@@ -43,20 +43,7 @@
             </ul>
         </div>
     </nav>
-    <aside>
-
-        <div class="left-menü">
-            <h2>Kategoriler</h2>
-            <ul>
-                <li> <a href="otomobil.html">Otomobil</a></li>
-                <li> <a href="suv.html"> Suv</a></li>
-                <li> <a href="motorsiklet.html">Motorsiklet</a></li>
-            </ul>
-
-
-        </div>
-
-    </aside>
+    
 
     <main>
         <article>
