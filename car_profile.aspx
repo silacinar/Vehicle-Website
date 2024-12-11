@@ -72,7 +72,7 @@
     <main>
    
               <div class="container">
-        <h1 style="text-align:center;">Vehicles List</h1>
+        <h1 style="text-align:center;">Vehicle</h1>
         
         <!-- Burada dinamik olarak kartlar yüklenecek -->
         <asp:PlaceHolder ID="vehiclesDetail" runat="server"></asp:PlaceHolder>
