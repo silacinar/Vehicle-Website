@@ -17,24 +17,22 @@ namespace Comecar
             if (!IsPostBack) // Sayfa ilk kez yüklendiğinde çalışacak
             {
                 // Veritabanına bağlanarak vehicle verilerini çekme
-                string connectionString = "Server=DESKTOP-LI7EMTS;Database=COMECAR;Integrated Security=True;";
+                string connectionString = "Server=HP\\SQLEXPRESS;Database=COMECAR;Integrated Security=True;";
                 string query = @"
-SELECT
-    DAILY_PRICE,
-    KILOMETRES,
-    YEAR,
-    V_ID,
-    BRAND_NAME,
-    COLOUR_NAME,
-    IMAGE1
-FROM
-    VEHICLES V
-JOIN
-    BRANDS B ON V.BRAND_ID = B.B_ID
-JOIN
-    COLOURS C ON V.COLOURS_ID = C.C_ID
-JOIN
-    IMAGE I ON V.IMAGE = I.I_ID";
+                SELECT 
+                    V.V_ID, 
+                    B.BRAND_NAME, 
+                    C.COLOUR_NAME, 
+                    I.IMAGE1
+                FROM 
+                    VEHICLES V
+                JOIN 
+                    BRANDS B ON V.BRAND_ID = B.B_ID
+                JOIN 
+                    COLOURS C ON V.COLOURS_ID = C.C_ID
+                JOIN
+                    IMAGE I ON V.IMAGE = I.I_ID";
+                // vehicles tablosundaki tüm veriler
 
                 using (SqlConnection conn = new SqlConnection(connectionString))
                 {
@@ -51,17 +49,13 @@ JOIN
 
                         // Kartı dinamik olarak oluşturma
                         string cardHtml = $@"
-        <div class='card'>
-            <div class='card-body'>
-                <h5 class='card-title'>{brandName} {colourName} ({year})</h5>
-                <p class='card-text'>
-                    Price: {dailyPrice} <br />
-                    Kilometres: {kilometres} <br />
-                    Year: {year} <br />
-                </p>
-                <img src='{image}' alt='{brandName} {colourName}' class='card-img-top' />
-            </div>
-        </div>";
+                    <div class='card'>
+                        <div class='card-body'>
+                            <h5 class='card-title'>{vehicleName}</h5>
+                            <p class='card-text'>{vehicleModel}</p>
+                             <img src='{vehicleImage}' alt='{vehicleName}' class='card-img-top' />
+                        </div>
+                    </div>";
 
                         // Kartı sayfaya eklemek için bir placeholder kullanabilirsiniz.
                         vehiclesPlaceholder.Controls.Add(new LiteralControl(cardHtml));
