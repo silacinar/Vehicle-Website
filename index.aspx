@@ -75,15 +75,7 @@
            <a href="filter.aspx" <button type="button" class="btn btn-outline-secondary">Filter</button></a>
 
         </div>
-                    
-       
-                
-                        
-                    
-                
-      
-
-
+           
 </aside>
     <main>
       <div class="container">
@@ -91,6 +83,9 @@
         
         <!-- Burada dinamik olarak kartlar yüklenecek -->
         <asp:PlaceHolder ID="vehiclesPlaceholder" runat="server"></asp:PlaceHolder>
+
+          
+
     </div>
     </main>
     <footer>

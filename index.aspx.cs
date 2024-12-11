@@ -17,24 +17,26 @@ namespace Comecar
             if (!IsPostBack) // Sayfa ilk kez yüklendiğinde çalışacak
             {
                 // Veritabanına bağlanarak vehicle verilerini çekme
-                string connectionString = "Server=DESKTOP-LI7EMTS;Database=COMECAR;Integrated Security=True;";
+
+                string connectionString = "Server=DESKTOP-8D8OQ9R;Database=COMECAR;Integrated Security=True;";
+
                 string query = @"
-SELECT
-    DAILY_PRICE,
-    KILOMETRES,
-    YEAR,
-    V_ID,
-    BRAND_NAME,
-    COLOUR_NAME,
-    IMAGE1
-FROM
-    VEHICLES V
-JOIN
-    BRANDS B ON V.BRAND_ID = B.B_ID
-JOIN
-    COLOURS C ON V.COLOURS_ID = C.C_ID
-JOIN
-    IMAGE I ON V.IMAGE = I.I_ID";
+                    SELECT
+                        DAILY_PRICE,
+                        KILOMETRES,
+                        YEAR,
+                        V_ID,
+                        BRAND_NAME,
+                        COLOUR_NAME,
+                        IMAGE1
+                    FROM
+                        VEHICLES V
+                    JOIN
+                        BRANDS B ON V.BRAND_ID = B.B_ID
+                    JOIN
+                        COLOURS C ON V.COLOURS_ID = C.C_ID
+                    JOIN
+                        IMAGE I ON V.IMAGE = I.I_ID";
 
                 using (SqlConnection conn = new SqlConnection(connectionString))
                 {
@@ -61,17 +63,20 @@ JOIN
 
                         // Tek bir HTML kartı oluşturma
                         string cardHtml = $@"
-        <div class='card'>
-            <div class='card-body'>
-                <h5 class='card-title'>{brandName} {colourName} ({year})</h5>
-                <p class='card-text'>
-                    Price: {dailyPrice} <br />
-                    Kilometres: {kilometres} <br />
-                    Year: {year} <br />
-                </p>
-                <img src='{image}' alt='{brandName} {colourName}' class='card-img-top' />
-            </div>
-        </div>";
+                        <div class='card'>
+                            <div class='card-body'>
+                                <h5 class='card-title'>{brandName} {colourName} ({year})</h5>
+                                <p class='card-text'>
+                                    Price: {dailyPrice} <br />
+                                    Kilometres: {kilometres} <br />
+                                    Year: {year} <br />
+                                </p>
+                                <img src='{image}' alt='{brandName} {colourName}' class='card-img-top' />
+                                
+                                <a href='car_profile.aspx?id={vehicleId}' class='btn btn-primary' tabindex='-1' role='button' aria-disabled='true'>Details</a>
+                                
+                            </div>
+                        </div>";
 
                         // HTML kartını placeholder'a eklemek için
                         vehiclesPlaceholder.Controls.Add(new LiteralControl(cardHtml));
@@ -85,4 +90,3 @@ JOIN
 
     }
 }
-

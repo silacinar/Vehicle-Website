@@ -462,3 +462,7 @@ button:hover {
     padding: 15px;
     background-color: #eeecec;
 }
+.card-img-top {
+    text-align: right;
+    width: 30%;
+}
