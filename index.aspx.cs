@@ -19,48 +19,67 @@ namespace Comecar
                 // Veritabanına bağlanarak vehicle verilerini çekme
                 string connectionString = "Server=DESKTOP-LI7EMTS;Database=COMECAR;Integrated Security=True;";
                 string query = @"
-                SELECT 
-                    V.V_ID, 
-                    B.BRAND_NAME, 
-                    C.COLOUR_NAME, 
-                    I.IMAGE1
-                FROM 
-                    VEHICLES V
-                JOIN 
-                    BRANDS B ON V.BRAND_ID = B.B_ID
-                JOIN 
-                    COLOURS C ON V.COLOURS_ID = C.C_ID
-                JOIN
-                    IMAGE I ON V.IMAGE = I.I_ID";
-                // vehicles tablosundaki tüm veriler
+SELECT
+    DAILY_PRICE,
+    KILOMETRES,
+    YEAR,
+    V_ID,
+    BRAND_NAME,
+    COLOUR_NAME,
+    IMAGE1
+FROM
+    VEHICLES V
+JOIN
+    BRANDS B ON V.BRAND_ID = B.B_ID
+JOIN
+    COLOURS C ON V.COLOURS_ID = C.C_ID
+JOIN
+    IMAGE I ON V.IMAGE = I.I_ID";
 
                 using (SqlConnection conn = new SqlConnection(connectionString))
                 {
-                    SqlDataAdapter da = new SqlDataAdapter(query, conn);
-                    DataTable dt = new DataTable();
-                    da.Fill(dt);
+                    conn.Open();
+                    SqlCommand command = new SqlCommand(query, conn);
 
-                    // Verileri HTML kartlarına yerleştirme
-                    foreach (DataRow row in dt.Rows)
+                    // SqlDataReader ile sorguları çalıştırıyoruz
+                    SqlDataReader reader = command.ExecuteReader();
+                    //sqlDataReader data  okumak için kullanılır
+
+                    // Verileri işleyip tek bir kart oluşturmak için
+                    while (reader.Read())
                     {
-                        string vehicleName = row["BRAND_NAME"].ToString(); // Örnek sütun adı
-                        string vehicleModel = row["COLOUR_NAME"].ToString(); // Örnek sütun adı
-                        string vehicleImage = row["IMAGE1"].ToString(); // Örnek sütun adı
+                        // İlk sorgudan gelen veriler
+                        string dailyPrice = reader["DAILY_PRICE"].ToString();
+                        string kilometres = reader["KILOMETRES"].ToString();
+                        string year = reader["YEAR"].ToString();
 
-                        // Kartı dinamik olarak oluşturma
+                        // İkinci sorgudan gelen veriler
+                        string vehicleId = reader["V_ID"].ToString();
+                        string brandName = reader["BRAND_NAME"].ToString();
+                        string colourName = reader["COLOUR_NAME"].ToString();
+                        string image = reader["IMAGE1"].ToString();
+
+                        // Tek bir HTML kartı oluşturma
                         string cardHtml = $@"
-                    <div class='card'>
-                        <div class='card-body'>
-                            <h5 class='card-title'>{vehicleName}</h5>
-                            <p class='card-text'>{vehicleModel}</p>
-                             <img src='{vehicleImage}' alt='{vehicleName}' class='card-img-top' />
-                        </div>
-                    </div>";
+        <div class='card'>
+            <div class='card-body'>
+                <h5 class='card-title'>{brandName} {colourName} ({year})</h5>
+                <p class='card-text'>
+                    Price: {dailyPrice} <br />
+                    Kilometres: {kilometres} <br />
+                    Year: {year} <br />
+                </p>
+                <img src='{image}' alt='{brandName} {colourName}' class='card-img-top' />
+            </div>
+        </div>";
 
-                        // Kartı sayfaya eklemek için bir placeholder kullanabilirsiniz.
+                        // HTML kartını placeholder'a eklemek için
                         vehiclesPlaceholder.Controls.Add(new LiteralControl(cardHtml));
                     }
+
+                    reader.Close(); // Veritabanı bağlantısını kapat
                 }
+
             }
         }
 
