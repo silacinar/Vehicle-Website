@@ -75,7 +75,7 @@ namespace Comecar
                                     <img src='{image}' alt='{brandName} {colourName}' class='card-img-top' /> 
                               </div>
                                 
-                                <a href='car_profile.aspx?id={vehicleId}' class='btn btn-primary' tabindex='-1' role='button' aria-disabled='true'>Details</a>
+                                <a href='car_profile.aspx?id={vehicleId}' class='btn btn-secondary' tabindex='-1' role='button' aria-disabled='true'>Details</a>
                                 
                             </div>
                         </div>";
