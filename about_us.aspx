@@ -57,7 +57,7 @@
     <footer>
         <section class="row">
             <div class="sosyal-medya">
-                <h5>Sosyal Medyada Biz</h5>
+                <h5>We on Social Media</h5>
                 <ul>
                     <li> <a href="ınstagram.html">Instagram</a></li>
                     <li> <a href="twitter.html">Twitter</a></li>
@@ -65,7 +65,7 @@
                 </ul>
             </div>
             <div class="iletişim">
-                <h5> Iletisim Bilgilerimiz</h5>
+                <h5> Our Contact Information</h5>
                 <ul>
                     <li> Ataşehir İstanbul</li>
                     <li>0(216) 321 456</li>
@@ -73,7 +73,7 @@
                 </ul>
             </div>
             <div class="Neden">
-              <p>© Copyright 2022 comecar.com Her hakkı saklıdır. Site içeriği izinsiz kopyalanamaz veya çoğaltılamaz.</p>
+              <p>© Copyright 2022 comecar.com All rights reserved. Site content cannot be copied or reproduced without permission.</p>
 
             </div>
         </section>

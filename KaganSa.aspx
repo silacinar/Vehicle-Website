@@ -10,6 +10,15 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+     <style>
+    main {
+        z-index: 1;
+    }
+
+    aside {
+        z-index: 2;
+    }
+</style>
 </head>
 <body>
     <form id="form1" runat="server">
@@ -27,7 +36,7 @@
                     <a href="login.hmtl"> Log In<sub>(for salers)</sub></a>
                 </li>
                 <li>
-                    <a href="register.aspx"> Add Vehicl</a>
+                    <a href="register.aspx"> Add Vehicle</a>
                 </li>
             </ul>
         </div>
@@ -68,7 +77,7 @@
     </aside>
     <main>
         <article>
-            <h1 class="text-center"> Kagan Alaybeyoglu Tüm Araclari</h1>
+            <h1 class="text-center"> All the Vehicles of Kagan Alaybeyoglu </h1>
         </article>
         <section class="row">
 
@@ -125,7 +134,7 @@
     <footer>
         <section class="row">
             <div class="sosyal-medya">
-                <h5>Sosyal Medyada Biz</h5>
+                <h5>We on Social Media</h5>
                 <ul>
                     <li>
                         <a href="ınstagram.html">Instagram</a>
@@ -139,7 +148,7 @@
                 </ul>
             </div>
             <div class="iletişim">
-                <h5> Iletisim Bilgilerimiz</h5>
+                <h5> Our Contact Information</h5>
                 <ul>
                     <li> Ataşehir İstanbul</li>
                     <li>0(216) 321 456</li>
@@ -147,7 +156,7 @@
                 </ul>
             </div>
             <div class="Neden">
-                <p>© Copyright 2022 comecar.com Her hakkı saklıdır. Site içeriği izinsiz kopyalanamaz veya çoğaltılamaz.</p>
+                <p>© Copyright 2022 comecar.com All rights reserved. Site content cannot be copied or reproduced without permission.</p>
 
             </div>
         </section>

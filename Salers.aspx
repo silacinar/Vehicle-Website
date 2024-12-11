@@ -47,7 +47,7 @@
     <main>
 
         <article>
-            <h1 class="text-center"> Satıcılarımız </h1>
+            <h1 class="text-center"> Our Sellers </h1>
         </article>
         <section class="row2">
 
@@ -58,7 +58,7 @@
                         <div class="card-body">
                             <h5 class="card-title">YAREN ÖZTÜRK</h5>
                             <p class="card-text">+90 553 984 1545 <br/>  efd@efd </p>
-                            <a href="YarenSa.aspx" class="card-link">Satıştaki Arabaları</a>
+                            <a href="YarenSa.aspx" class="card-link">Cars For Sale</a>
                         </div>
                     </div>
                 </div>
@@ -68,7 +68,7 @@
                         <div class="card-body">
                             <h5 class="card-title">HAKAN ALAYBEYOĞLU</h5>
                             <p class="card-text">+90 532 237 8392 <br/>  klm@klm </p>
-                            <a href="HakanSa.aspx" class="card-link">Satıştaki Arabaları</a>
+                            <a href="HakanSa.aspx" class="card-link">Cars For Sale</a>
                         </div>
                     </div>
                 </div>
@@ -78,7 +78,7 @@
                         <div class="card-body">
                             <h5 class="card-title">SILA ÇINAR</h5>
                             <p class="card-text">+90 538 939 8435 <br />  cdb@cdb </p>
-                            <a href="SilaSa.aspx" class="card-link">Satıştaki Arabaları</a>
+                            <a href="SilaSa.aspx" class="card-link">Cars For Sale</a>
                         </div>
                     </div>
                 </div>
@@ -88,7 +88,7 @@
                         <div class="card-body">
                             <h5 class="card-title">KAĞAN ALAYBEYOĞLU</h5>
                             <p class="card-text">+90 532 322 4095 <br />  abc@abc </p>
-                            <a href="KaganSa.aspx" class="card-link">Satıştaki Arabaları</a>
+                            <a href="KaganSa.aspx" class="card-link">Cars For Sale</a>
                         </div>
                     </div>
                 </div>
@@ -100,7 +100,7 @@
     <footer>
         <section class="row">
             <div class="sosyal-medya">
-                <h5>Sosyal Medyada Biz</h5>
+                <h5>We on Social Media</h5>
                 <ul>
                     <li> <a href="ınstagram.html">Instagram</a></li>
                     <li> <a href="twitter.html">Twitter</a></li>
@@ -108,7 +108,7 @@
                 </ul>
             </div>
             <div class="iletişim">
-                <h5> Iletisim Bilgilerimiz</h5>
+                <h5> Our Contact Information</h5>
                 <ul>
                     <li> Ataşehir İstanbul</li>
                     <li>0(216) 321 456</li>
@@ -116,7 +116,7 @@
                 </ul>
             </div>
             <div class="Neden">
-               <p>© Copyright 2022 comecar.com Her hakkı saklıdır. Site içeriği izinsiz kopyalanamaz veya çoğaltılamaz.</p>
+               <p>© Copyright 2022 comecar.com All rights reserved. Site content cannot be copied or reproduced without permission.</p>
             </div>
         </section>
 
