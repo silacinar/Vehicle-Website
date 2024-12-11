@@ -65,13 +65,15 @@ namespace Comecar
                         string cardHtml = $@"
                         <div class='card'>
                             <div class='card-body'>
-                                <h5 class='card-title'>{brandName} {colourName} ({year})</h5>
+                                <h3 class='card-title'>{brandName} {colourName} ({year})</h3>
                                 <p class='card-text'>
-                                    Price: {dailyPrice} <br />
+                                   <h5> Price: {dailyPrice} </h5> 
                                     Kilometres: {kilometres} <br />
                                     Year: {year} <br />
                                 </p>
-                                <img src='{image}' alt='{brandName} {colourName}' class='card-img-top' />
+                              <div class='image-body'> 
+                                    <img src='{image}' alt='{brandName} {colourName}' class='card-img-top' /> 
+                              </div>
                                 
                                 <a href='car_profile.aspx?id={vehicleId}' class='btn btn-primary' tabindex='-1' role='button' aria-disabled='true'>Details</a>
                                 
