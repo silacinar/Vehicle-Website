@@ -17,74 +17,56 @@ namespace Comecar
             if (!IsPostBack) // Sayfa ilk kez yüklendiğinde çalışacak
             {
                 // Veritabanına bağlanarak vehicle verilerini çekme
-
-                string connectionString = "Server=DESKTOP-8D8OQ9R;Database=COMECAR;Integrated Security=True;";
-
+                string connectionString = "Server=DESKTOP-LI7EMTS;Database=COMECAR;Integrated Security=True;";
                 string query = @"
-                    SELECT
-                        DAILY_PRICE,
-                        KILOMETRES,
-                        YEAR,
-                        V_ID,
-                        BRAND_NAME,
-                        COLOUR_NAME,
-                        IMAGE1
-                    FROM
-                        VEHICLES V
-                    JOIN
-                        BRANDS B ON V.BRAND_ID = B.B_ID
-                    JOIN
-                        COLOURS C ON V.COLOURS_ID = C.C_ID
-                    JOIN
-                        IMAGE I ON V.IMAGE = I.I_ID";
+SELECT
+    DAILY_PRICE,
+    KILOMETRES,
+    YEAR,
+    V_ID,
+    BRAND_NAME,
+    COLOUR_NAME,
+    IMAGE1
+FROM
+    VEHICLES V
+JOIN
+    BRANDS B ON V.BRAND_ID = B.B_ID
+JOIN
+    COLOURS C ON V.COLOURS_ID = C.C_ID
+JOIN
+    IMAGE I ON V.IMAGE = I.I_ID";
 
                 using (SqlConnection conn = new SqlConnection(connectionString))
                 {
-                    conn.Open();
-                    SqlCommand command = new SqlCommand(query, conn);
+                    SqlDataAdapter da = new SqlDataAdapter(query, conn);
+                    DataTable dt = new DataTable();
+                    da.Fill(dt);
 
-                    // SqlDataReader ile sorguları çalıştırıyoruz
-                    SqlDataReader reader = command.ExecuteReader();
-                    //sqlDataReader data  okumak için kullanılır
-
-                    // Verileri işleyip tek bir kart oluşturmak için
-                    while (reader.Read())
+                    // Verileri HTML kartlarına yerleştirme
+                    foreach (DataRow row in dt.Rows)
                     {
-                        // İlk sorgudan gelen veriler
-                        string dailyPrice = reader["DAILY_PRICE"].ToString();
-                        string kilometres = reader["KILOMETRES"].ToString();
-                        string year = reader["YEAR"].ToString();
+                        string vehicleName = row["BRAND_NAME"].ToString(); // Örnek sütun adı
+                        string vehicleModel = row["COLOUR_NAME"].ToString(); // Örnek sütun adı
+                        string vehicleImage = row["IMAGE1"].ToString(); // Örnek sütun adı
 
-                        // İkinci sorgudan gelen veriler
-                        string vehicleId = reader["V_ID"].ToString();
-                        string brandName = reader["BRAND_NAME"].ToString();
-                        string colourName = reader["COLOUR_NAME"].ToString();
-                        string image = reader["IMAGE1"].ToString();
-
-                        // Tek bir HTML kartı oluşturma
+                        // Kartı dinamik olarak oluşturma
                         string cardHtml = $@"
-                        <div class='card'>
-                            <div class='card-body'>
-                                <h5 class='card-title'>{brandName} {colourName} ({year})</h5>
-                                <p class='card-text'>
-                                    Price: {dailyPrice} <br />
-                                    Kilometres: {kilometres} <br />
-                                    Year: {year} <br />
-                                </p>
-                                <img src='{image}' alt='{brandName} {colourName}' class='card-img-top' />
-                                
-                                <a href='car_profile.aspx?id={vehicleId}' class='btn btn-primary' tabindex='-1' role='button' aria-disabled='true'>Details</a>
-                                
-                            </div>
-                        </div>";
+        <div class='card'>
+            <div class='card-body'>
+                <h5 class='card-title'>{brandName} {colourName} ({year})</h5>
+                <p class='card-text'>
+                    Price: {dailyPrice} <br />
+                    Kilometres: {kilometres} <br />
+                    Year: {year} <br />
+                </p>
+                <img src='{image}' alt='{brandName} {colourName}' class='card-img-top' />
+            </div>
+        </div>";
 
-                        // HTML kartını placeholder'a eklemek için
+                        // Kartı sayfaya eklemek için bir placeholder kullanabilirsiniz.
                         vehiclesPlaceholder.Controls.Add(new LiteralControl(cardHtml));
                     }
-
-                    reader.Close(); // Veritabanı bağlantısını kapat
                 }
-
             }
         }
 
