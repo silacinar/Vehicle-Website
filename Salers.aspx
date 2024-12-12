@@ -10,6 +10,15 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+ <style>
+    .main {
+        z-index: 1;
+    }
+
+    .aside {
+        z-index: 2;
+    }
+</style>
 </head>
 <body>
     <form id="form1" runat="server">
@@ -46,55 +55,17 @@
    
     <main>
 
-        <article>
-            <h1 class="text-center"> Our Sellers </h1>
-        </article>
-        <section class="row2">
+        
 
-            <div class="row row-cols-1 row-cols-md-2 g-4">
-                <div class="col">
-                    <div class="card">
 
-                        <div class="card-body">
-                            <h5 class="card-title">YAREN ÖZTÜRK</h5>
-                            <p class="card-text">+90 553 984 1545 <br/>  efd@efd </p>
-                            <a href="YarenSa.aspx" class="card-link">Cars For Sale</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card">
-                       
-                        <div class="card-body">
-                            <h5 class="card-title">HAKAN ALAYBEYOĞLU</h5>
-                            <p class="card-text">+90 532 237 8392 <br/>  klm@klm </p>
-                            <a href="HakanSa.aspx" class="card-link">Cars For Sale</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card">
-                        
-                        <div class="card-body">
-                            <h5 class="card-title">SILA ÇINAR</h5>
-                            <p class="card-text">+90 538 939 8435 <br />  cdb@cdb </p>
-                            <a href="SilaSa.aspx" class="card-link">Cars For Sale</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card">
-                        
-                        <div class="card-body">
-                            <h5 class="card-title">KAĞAN ALAYBEYOĞLU</h5>
-                            <p class="card-text">+90 532 322 4095 <br />  abc@abc </p>
-                            <a href="KaganSa.aspx" class="card-link">Cars For Sale</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+    <div class="container">
+        <h1 style="text-align:center;">Our Sellers</h1>
+    
+        <!-- Burada dinamik olarak kartlar yüklenecek -->
+        <asp:PlaceHolder ID="salersPlaceholder" runat="server"></asp:PlaceHolder>
 
-            <section />
+    </div>
+
 
 </main>
     <footer>

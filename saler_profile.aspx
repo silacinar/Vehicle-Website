@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="SilaSa.aspx.cs" Inherits="Comecar.SilaSa" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="saler_profile.aspx.cs" Inherits="Comecar.HakanSa" %>
 
 <!DOCTYPE html>
 
@@ -10,7 +10,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <style>
+     <style>
     main {
         z-index: 1;
     }
@@ -65,7 +65,8 @@
         </div>
     </nav>
     <aside>
- <div class="left-menü ">
+
+        <div class="left-menü ">
      <h1>Filter</h1>
     <p>It is easier to find your dream vehicle with the filtering section!</p>
 
@@ -74,9 +75,23 @@
  </div>
 
     </aside>
+
+
     <main>
-        <article>
-            <h1 class="text-center">  All the Vehicles of Sila Güler Çinar </h1>
+
+                  <div class="container">
+    <h1 style="text-align:center;">Seller Profile</h1>
+    
+    <!-- Burada dinamik olarak kartlar yüklenecek -->
+    <asp:PlaceHolder ID="salersProfile" runat="server"></asp:PlaceHolder>
+</div>
+
+
+
+
+
+        <%--<article>
+            <h1 class="text-center">All the Vehicles of Hakan Alaybeyoglu</h1>
         </article>
         <section class="row">
 
@@ -127,9 +142,11 @@
             </div>
 
 
-
-        </section>
+        </section>--%>
     </main>
+
+
+
     <footer>
         <section class="row">
             <div class="sosyal-medya">
@@ -155,7 +172,7 @@
                 </ul>
             </div>
             <div class="Neden">
-                <p>© Copyright 2022 comecar.com All rights reserved. Site content cannot be copied or reproduced without permission.</p>
+               <p>© Copyright 2022 comecar.com All rights reserved. Site content cannot be copied or reproduced without permission.</p>
             </div>
         </section>
 

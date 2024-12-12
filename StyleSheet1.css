@@ -462,7 +462,12 @@ button:hover {
     padding: 15px;
     background-color: #eeecec;
 }
-.card-img-top {
-    text-align: right;
-    width: 30%;
+.image-body {
+    text-align: left; /* Resmi sola hizalar */
 }
+
+    .image-body {
+        width: 150px; /* Resmin genişliğini 150px yapar */
+        height: auto; /* Yüksekliği orantılı olarak ayarlar */
+        display: block; /* Resmin bir blok elemanı gibi davranmasını sağlar */
+    }

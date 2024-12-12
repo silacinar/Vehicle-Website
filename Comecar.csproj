@@ -119,9 +119,8 @@
     <Content Include="map.png" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
-    <Content Include="HakanSa.aspx" />
+    <Content Include="saler_profile.aspx" />
     <Content Include="index.aspx" />
-    <Content Include="KaganSa.aspx" />
     <Content Include="logo.png" />
     <Content Include="register.aspx" />
     <Content Include="Salers.aspx" />
@@ -155,7 +154,6 @@
     <Content Include="Content\bootstrap-grid.css.map" />
     <Content Include="StyleSheet1.css" />
     <Content Include="filter.aspx" />
-    <Content Include="YarenSa.aspx" />
     <None Include="Scripts\jquery-3.7.0.intellisense.js" />
     <Content Include="Scripts\jquery-3.7.0.js" />
     <Content Include="Scripts\jquery-3.7.0.min.js" />
@@ -183,7 +181,6 @@
     <Content Include="Scripts\WebForms\WebForms.js" />
     <Content Include="Scripts\WebForms\WebParts.js" />
     <Content Include="Scripts\WebForms\WebUIValidation.js" />
-    <Content Include="SilaSa.aspx" />
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Web.config" />
     <Content Include="Bundle.config" />
@@ -215,12 +212,12 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="HakanSa.aspx.cs">
-      <DependentUpon>HakanSa.aspx</DependentUpon>
+    <Compile Include="saler_profile.aspx.cs">
+      <DependentUpon>saler_profile.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="HakanSa.aspx.designer.cs">
-      <DependentUpon>HakanSa.aspx</DependentUpon>
+    <Compile Include="saler_profile.aspx.designer.cs">
+      <DependentUpon>saler_profile.aspx</DependentUpon>
     </Compile>
     <Compile Include="index.aspx.cs">
       <DependentUpon>index.aspx</DependentUpon>
@@ -228,13 +225,6 @@
     </Compile>
     <Compile Include="index.aspx.designer.cs">
       <DependentUpon>index.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="KaganSa.aspx.cs">
-      <DependentUpon>KaganSa.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="KaganSa.aspx.designer.cs">
-      <DependentUpon>KaganSa.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="register.aspx.cs">
@@ -251,13 +241,6 @@
     <Compile Include="Salers.aspx.designer.cs">
       <DependentUpon>Salers.aspx</DependentUpon>
     </Compile>
-    <Compile Include="SilaSa.aspx.cs">
-      <DependentUpon>SilaSa.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="SilaSa.aspx.designer.cs">
-      <DependentUpon>SilaSa.aspx</DependentUpon>
-    </Compile>
     <Compile Include="ViewSwitcher.ascx.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -271,13 +254,6 @@
     </Compile>
     <Compile Include="filter.aspx.designer.cs">
       <DependentUpon>filter.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="YarenSa.aspx.cs">
-      <DependentUpon>YarenSa.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="YarenSa.aspx.designer.cs">
-      <DependentUpon>YarenSa.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
