@@ -18,7 +18,7 @@ namespace Comecar
             if (!IsPostBack) // Sayfa ilk kez yüklendiğinde çalışacak
             {
                 // Veritabanına bağlanarak vehicle verilerini çekme
-                string connectionString = "Server=HP\\SQLEXPRESS;Database=COMECAR;Integrated Security=True;";
+                string connectionString = "Server=DESKTOP-LI7EMTS;Database=COMECAR;Integrated Security=True;";
                 string query = @"
                     SELECT
                         DAILY_PRICE,
