@@ -1,25 +1,24 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
-using System.Data;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using System.ComponentModel.DataAnnotations;
+using System.Xml.Linq;
 
 namespace Comecar
 {
-    public partial class index : System.Web.UI.Page
+    public partial class HakanSa : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            //istekten gelen querydeki (indexteki) stringi alıyor 
+            string id = Request.QueryString["id"];
             if (!IsPostBack) // Sayfa ilk kez yüklendiğinde çalışacak
             {
                 // Veritabanına bağlanarak vehicle verilerini çekme
-
                 string connectionString = "Server=HP\\SQLEXPRESS;Database=COMECAR;Integrated Security=True;";
-
                 string query = @"
                     SELECT
                         DAILY_PRICE,
@@ -28,7 +27,8 @@ namespace Comecar
                         V_ID,
                         BRAND_NAME,
                         COLOUR_NAME,
-                        IMAGE1
+                        IMAGE1,
+                        SALER_ID
                     FROM
                         VEHICLES V
                     JOIN
@@ -36,7 +36,12 @@ namespace Comecar
                     JOIN
                         COLOURS C ON V.COLOURS_ID = C.C_ID
                     JOIN
-                        IMAGE I ON V.IMAGE = I.I_ID";
+                        IMAGE I ON V.IMAGE = I.I_ID
+                    JOIN
+                        SALERS S ON V.SALER_ID = S.S_ID
+                    WHERE
+                        S_ID = '" + id + "'";
+
 
                 using (SqlConnection conn = new SqlConnection(connectionString))
                 {
@@ -63,7 +68,7 @@ namespace Comecar
 
                         // Tek bir HTML kartı oluşturma
                         string cardHtml = $@"
-                        <div class='card'>
+                                                <div class='card'>
                             <div class='card-body'>
                                 <h3 class='card-title'>{brandName} {colourName} ({year})</h3>
                                 <p class='card-text'>
@@ -81,7 +86,8 @@ namespace Comecar
                         </div>";
 
                         // HTML kartını placeholder'a eklemek için
-                        vehiclesPlaceholder.Controls.Add(new LiteralControl(cardHtml));
+                        salersProfile.Controls.Add(new LiteralControl(cardHtml));
+
                     }
 
                     reader.Close(); // Veritabanı bağlantısını kapat
@@ -89,6 +95,5 @@ namespace Comecar
 
             }
         }
-
     }
 }
