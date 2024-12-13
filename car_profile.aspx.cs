@@ -86,38 +86,47 @@ namespace Comecar
 
                         // Tek bir HTML kartı oluşturma
                         string cardHtml = $@"
-                        <div id='carouselExampleControlsNoTouching' class='carousel slide' data-bs-touch='false'>
-                        <div class='carousel-inner'>";
-                        if (image1 != "")
-                        {
-                            cardHtml += $@"
-                            <div class='carousel-item active'>
-                              <img src='{image1}' class='d-block w-100' >
-                            </div>";
-                        }
-                        if (image2 != "")
-                        {
-                            cardHtml +=
-                               $@"<div class='carousel-item'>
-                              <img src = '{image2}' class='d-block w-100' >
-                            </div>";
-                        }
-                        if (image3 != "")
-                        {
-                            cardHtml +=
-                               $@"<div class='carousel-item'>
-                              <img src = '{image3}' class='d-block w-100' >
-                            </div>";
-                        }
-
-                        cardHtml += $@"</div><button class='carousel-control-prev' type='button' data-bs-target='#carouselExampleControlsNoTouching' data-bs-slide='prev'>
-                            <span class='carousel-control-prev-icon' aria-hidden='true'></span>
-                            <span class='visually-hidden'>Previous</span>
-                          </button>
-                          <button class='carousel-control-next' type='button' data-bs-target='#carouselExampleControlsNoTouching' data-bs-slide='next'>
-                            <span class='carousel-control-next-icon' aria-hidden='true'></span>
-                            <span class='visually-hidden'>Next</span>
-                          </button>
+                        <div class='row'>
+                            <div class='col-md-6'>
+                                <div id='carouselExampleControls' class='carousel slide' data-bs-ride='carousel'>
+                                    <div class='carousel-inner'>
+                                        {(string.IsNullOrEmpty(image1) ? "": $"<div class='carousel-item active'><img src='{image1}' class='d-block w-100'></div>")}
+                                        {(string.IsNullOrEmpty(image2) ? "" : $"<div class='carousel-item'><img src='{image2}' class='d-block w-100'></div>")}
+                                        {(string.IsNullOrEmpty(image3) ? "" : $"<div class='carousel-item'><img src='{image3}' class='d-block w-100'></div>")}
+                                    </div>
+                                    <button class='carousel-control-prev' type='button' data-bs-target='#carouselExampleControls' data-bs-slide='prev'>
+                                        <span class='carousel-control-prev-icon' aria-hidden='true'></span>
+                                        <span class='visually-hidden'>Previous</span>
+                                    </button>
+                                    <button class='carousel-control-next' type='button' data-bs-target='#carouselExampleControls' data-bs-slide='next'>
+                                        <span class='carousel-control-next-icon' aria-hidden='true'></span>
+                                        <span class='visually-hidden'>Next</span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class='col-md-6'>
+                                <div class='card'>
+                                    <div class='card-body'>
+                                        <h5 class='card-title'>Araç Bilgileri</h5>
+                                        <p class='card-text'>Marka: {brandName}</p>
+                                        <p class='card-text'>Renk: {colourName}</p>
+                                        <p class='card-text'>Yıl: {year}</p>
+                                        <p class='card-text'>Kilometre: {kilometres}</p>
+                                        <p class='card-text'>Yakıt Türü: {fuelName}</p>
+                                        <p class='card-text'>Vites Türü: {gearName}</p>
+                                        <p class='card-text'>Hasar: {damage}</p>
+                                        <p class='card-text'>Günlük Fiyat: {dailyPrice}</p>
+                                    </div>
+                                </div>
+                                <div class='card mt-3'>
+                                    <div class='card-body'>
+                                        <h5 class='card-title'>Satıcı Bilgileri</h5>
+                                        <p class='card-text'>Ad Soyad: {salerName}</p>
+                                        <p class='card-text'>Telefon: {salerNum}</p>
+                                        <p class='card-text'>Email: {salerEmail}</p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>";
 
                         // HTML kartını placeholder'a eklemek için
