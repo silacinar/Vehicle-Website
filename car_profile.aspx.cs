@@ -107,23 +107,23 @@ namespace Comecar
                             <div class='col-md-6'>
                                 <div class='card'>
                                     <div class='card-body'>
-                                        <h5 class='card-title'>Araç Bilgileri</h5>
-                                        <p class='card-text'>Marka: {brandName}</p>
-                                        <p class='card-text'>Renk: {colourName}</p>
-                                        <p class='card-text'>Yıl: {year}</p>
-                                        <p class='card-text'>Kilometre: {kilometres}</p>
-                                        <p class='card-text'>Yakıt Türü: {fuelName}</p>
-                                        <p class='card-text'>Vites Türü: {gearName}</p>
-                                        <p class='card-text'>Hasar: {damage}</p>
-                                        <p class='card-text'>Günlük Fiyat: {dailyPrice}</p>
+                                        <h5 class='card-title'>VEHICLE DETAILS</h5>
+                                        <p class='card-text'>Brand: {brandName}</p>
+                                        <p class='card-text'>Colour: {colourName}</p>
+                                        <p class='card-text'>Year: {year}</p>
+                                        <p class='card-text'>KM: {kilometres}</p>
+                                        <p class='card-text'>Fuel Type: {fuelName}</p>
+                                        <p class='card-text'>Gear Type: {gearName}</p>
+                                        <p class='card-text'>Damage Record: {damage}</p>
+                                        <p class='card-text'>Price: {dailyPrice}</p>
                                     </div>
                                 </div>
                                 <div class='card mt-3'>
                                     <div class='card-body'>
-                                        <h5 class='card-title'>Satıcı Bilgileri</h5>
-                                        <p class='card-text'>Ad Soyad: {salerName}</p>
-                                        <p class='card-text'>Telefon: {salerNum}</p>
-                                        <p class='card-text'>Email: {salerEmail}</p>
+                                        <h5 class='card-title'>Seller Information</h5>
+                                        <p class='card-text'>Name: {salerName}</p>
+                                        <p class='card-text'>Phone Number: {salerNum}</p>
+                                        <p class='card-text'>E-mail: {salerEmail}</p>
                                     </div>
                                 </div>
                             </div>
