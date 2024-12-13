@@ -24,6 +24,15 @@ namespace Comecar
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
+        /// leftMenu denetimi.
+        /// </summary>
+        /// <remarks>
+        /// Otomatik olarak oluşturulan alan.
+        /// Değiştirmek için, alan bildirimini tasarımcı dosyasından arka plan kod dosyasına taşıyın.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.PlaceHolder leftMenu;
+
+        /// <summary>
         /// salersProfile denetimi.
         /// </summary>
         /// <remarks>

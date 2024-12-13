@@ -65,84 +65,26 @@
         </div>
     </nav>
     <aside>
-
-        <div class="left-menü ">
-     <h1>Filter</h1>
-    <p>It is easier to find your dream vehicle with the filtering section!</p>
-
-    <a href="filter.aspx" <button type="button" class="btn btn-outline-secondary">Filter</button></a>
-
- </div>
-
+            <div class="left-menü">
+                    <!-- Satıcı Bilgileri Placeholder -->
+                    <asp:PlaceHolder ID="leftMenu" runat="server"></asp:PlaceHolder>
+                    
+                    <h1>Filter</h1>
+                    <p>It is easier to find your dream vehicle with the filtering section!</p>
+                    <a href="filter.aspx"><button type="button" class="btn btn-outline-secondary">Filter</button></a>
+            </div>
     </aside>
 
 
     <main>
 
-                  <div class="container">
-    <h1 style="text-align:center;">Seller Profile</h1>
+    <div class="container">
+        <h1 style="text-align:center;">Seller Profile</h1>
     
-    <!-- Burada dinamik olarak kartlar yüklenecek -->
-    <asp:PlaceHolder ID="salersProfile" runat="server"></asp:PlaceHolder>
-</div>
+        <!-- Burada dinamik olarak kartlar yüklenecek -->
+        <asp:PlaceHolder ID="salersProfile" runat="server"></asp:PlaceHolder>
+    </div>
 
-
-
-
-
-        <%--<article>
-            <h1 class="text-center">All the Vehicles of Hakan Alaybeyoglu</h1>
-        </article>
-        <section class="row">
-
-            <div class="card card1">
-                <img src="assets/img/mercedes a 200.jpg"
-                <svg class="bd-placeholder-img card-img-top" width="100%" height="180" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Image cap" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"></rect><text x="50%" y="50%" fill="#dee2e6" dy=".3em">Image cap</text></svg>
-                <div class="card-body">
-                    <h5 class="card-title">Mercedes A200</h5>
-                    <p class="card-text">
-                        <ul>
-                            <li>KM:54.000</li>
-                            <li>YIL:2020</li>
-                            <li>HASAR KAYDI:1200</li>
-                        </ul>
-                    </p>
-                    <a href="" class="btn btn-primary">Ilana Git</a>
-                </div>
-            </div>
-            <div class="card card2">
-                <img src="assets/img/a3.jpg"
-                <svg class="bd-placeholder-img card-img-top" width="100%" height="180" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Image cap" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"></rect><text x="50%" y="50%" fill="#dee2e6" dy=".3em">Image cap</text></svg>
-                <div class="card-body">
-                    <h5 class="card-title">Audi A3</h5>
-                    <p class="card-text">
-                        <ul>
-                            <li>YIL:205</li>
-                            <li>HASAR KAYDI:56.000</li>
-                        </ul>
-                    </p>
-                    <a href="assets/img/a3" class="btn btn-primary">Ilana Git</a>
-                </div>
-            </div>
-            <div class="card card3">
-                <svg class="bd-placeholder-img card-img-top" width="100%" height="180" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Image cap" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"></rect><text x="50%" y="50%" fill="#dee2e6" dy=".3em">Image cap</text></svg>
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
-            </div>
-            <div class="card card4">
-                <svg class="bd-placeholder-img card-img-top" width="100%" height="180" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Image cap" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"></rect><text x="50%" y="50%" fill="#dee2e6" dy=".3em">Image cap</text></svg>
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
-            </div>
-
-
-        </section>--%>
     </main>
 
 
