@@ -17,82 +17,99 @@ namespace Comecar
             string id = Request.QueryString["id"];
             if (!IsPostBack) // Sayfa ilk kez yüklendiğinde çalışacak
             {
-                // Veritabanına bağlanarak vehicle verilerini çekme
-                string connectionString = "Server=HP\\SQLEXPRESS;Database=COMECAR;Integrated Security=True;";
-                string query = @"
-                    SELECT
-                        DAILY_PRICE,
-                        KILOMETRES,
-                        YEAR,
-                        V_ID,
-                        BRAND_NAME,
-                        COLOUR_NAME,
-                        IMAGE1,
-                        SALER_ID
-                    FROM
-                        VEHICLES V
-                    JOIN
-                        BRANDS B ON V.BRAND_ID = B.B_ID
-                    JOIN
-                        COLOURS C ON V.COLOURS_ID = C.C_ID
-                    JOIN
-                        IMAGE I ON V.IMAGE = I.I_ID
-                    JOIN
-                        SALERS S ON V.SALER_ID = S.S_ID
-                    WHERE
-                        S_ID = '" + id + "'";
-
-
+                // Veritabanına bağlanarak verileri çekme
+                string connectionString = "Server=DESKTOP-LI7EMTS;Database=COMECAR;Integrated Security=True;";
                 using (SqlConnection conn = new SqlConnection(connectionString))
                 {
                     conn.Open();
-                    SqlCommand command = new SqlCommand(query, conn);
 
-                    // SqlDataReader ile sorguları çalıştırıyoruz
-                    SqlDataReader reader = command.ExecuteReader();
-                    //sqlDataReader data  okumak için kullanılır
+                    // 1. Satıcı bilgilerini çekme
+                    string salerQuery = @"
+                        SELECT FULL_NAME, EMAIL, PHONE_NUM
+                        FROM SALERS
+                        WHERE S_ID = @id";
+                    SqlCommand salerCommand = new SqlCommand(salerQuery, conn);
+                    salerCommand.Parameters.AddWithValue("@id", id);
 
-                    // Verileri işleyip tek bir kart oluşturmak için
-                    while (reader.Read())
+                    SqlDataReader salerReader = salerCommand.ExecuteReader();
+                    if (salerReader.Read())
                     {
-                        // İlk sorgudan gelen veriler
-                        string dailyPrice = reader["DAILY_PRICE"].ToString();
-                        string kilometres = reader["KILOMETRES"].ToString();
-                        string year = reader["YEAR"].ToString();
+                        string salerName = salerReader["FULL_NAME"].ToString();
+                        string salerEmail = salerReader["EMAIL"].ToString();
+                        string salerPhone = salerReader["PHONE_NUM"].ToString();
 
-                        // İkinci sorgudan gelen veriler
-                        string vehicleId = reader["V_ID"].ToString();
-                        string brandName = reader["BRAND_NAME"].ToString();
-                        string colourName = reader["COLOUR_NAME"].ToString();
-                        string image = reader["IMAGE1"].ToString();
-
-                        // Tek bir HTML kartı oluşturma
-                        string cardHtml = $@"
-                                                <div class='card'>
-                            <div class='card-body'>
-                                <h3 class='card-title'>{brandName} {colourName} ({year})</h3>
-                                <p class='card-text'>
-                                   <h5> Price: {dailyPrice} </h5> 
-                                    Kilometres: {kilometres} <br />
-                                    Year: {year} <br />
-                                </p>
-                              <div class='image-body'> 
-                                    <img src='{image}' alt='{brandName} {colourName}' class='card-img-top' /> 
-                              </div>
+                        // Satıcı bilgileri için HTML oluştur
+                        string salerInfoHtml = $@"
+                            <div class='saler-info'>
+                                <h4>Seller Information</h4>
+                                <p><strong>Name:</strong> {salerName}</p>
+                                <p><strong>Phone Number:</strong> {salerPhone}</p>
+                                <p><strong>E-mail:</strong> {salerEmail}</p>
                                 
-                                <a href='car_profile.aspx?id={vehicleId}' class='btn btn-secondary' tabindex='-1' role='button' aria-disabled='true'>Details</a>
-                                
-                            </div>
-                        </div>";
+                            </div>";
 
-                        // HTML kartını placeholder'a eklemek için
-                        salersProfile.Controls.Add(new LiteralControl(cardHtml));
-
+                        // Left Menu'ye ekle
+                        leftMenu.Controls.Add(new LiteralControl(salerInfoHtml));
                     }
+                    salerReader.Close();
 
-                    reader.Close(); // Veritabanı bağlantısını kapat
+                    // 2. Araç bilgilerini çekme
+                    string vehicleQuery = @"
+                        SELECT
+                            DAILY_PRICE,
+                            KILOMETRES,
+                            YEAR,
+                            V_ID,
+                            BRAND_NAME,
+                            COLOUR_NAME,
+                            IMAGE1,
+                            SALER_ID
+                        FROM
+                            VEHICLES V
+                        JOIN
+                            BRANDS B ON V.BRAND_ID = B.B_ID
+                        JOIN
+                            COLOURS C ON V.COLOURS_ID = C.C_ID
+                        JOIN
+                            IMAGE I ON V.IMAGE = I.I_ID
+                        WHERE
+                            SALER_ID = @id";
+                    SqlCommand vehicleCommand = new SqlCommand(vehicleQuery, conn);
+                    vehicleCommand.Parameters.AddWithValue("@id", id);
+
+                    SqlDataReader vehicleReader = vehicleCommand.ExecuteReader();
+                    while (vehicleReader.Read())
+                    {
+                        string brandName = vehicleReader["BRAND_NAME"].ToString();
+                        string colourName = vehicleReader["COLOUR_NAME"].ToString();
+                        string dailyPrice = vehicleReader["DAILY_PRICE"].ToString();
+                        string kilometres = vehicleReader["KILOMETRES"].ToString();
+                        string year = vehicleReader["YEAR"].ToString();
+                        string image = vehicleReader["IMAGE1"].ToString();
+                        string vehicleId = vehicleReader["V_ID"].ToString();
+
+                        // Araç kartı için HTML oluştur
+                        string cardHtml = $@"
+                            <div class='card'>
+                                <div class='card-body'>
+                                    <h3 class='card-title'>{brandName} {colourName} ({year})</h3>
+                                    <p class='card-text'>
+                                        <h5>Price: {dailyPrice}</h5> 
+                                        Kilometres: {kilometres}<br />
+                                        Year: {year}
+                                    </p>
+                                    <div class='image-body'> 
+                                        <img src='{image}' alt='{brandName} {colourName}' class='card-img-top' /> 
+                                    </div>
+                                    <a href='car_profile.aspx?id={vehicleId}' class='btn btn-secondary' tabindex='-1' role='button' aria-disabled='true'>Details</a>
+                                </div>
+                            </div>";
+
+                        // Kartı placeholder'a ekle
+                        salersProfile.Controls.Add(new LiteralControl(cardHtml));
+                    }
+                    vehicleReader.Close();
                 }
-
             }
         }
     }

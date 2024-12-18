@@ -82,9 +82,9 @@
     </main>
 
 
-    <footer>
+    <footer  style='position: relative; bottom: -125px;'>
         <section class="row">
-            <div class="sosyal-medya">
+            <div class=' col-md-4 sosyal-medya'>
                 <h5>We on Social Media</h5>
                 <ul>
                     <li>
@@ -98,7 +98,7 @@
                     </li>
                 </ul>
             </div>
-            <div class="iletişim">
+            <div class=' col-md-4 iletişim'>
                 <h5> Our Contact Information</h5>
                 <ul>
                     <li> Ataşehir İstanbul</li>
@@ -106,7 +106,7 @@
                     <li>comecar@info.com</li>
                 </ul>
             </div>
-            <div class="Neden">
+            <div class=' col-md-4 Neden'>
                 <p>© Copyright 2022 comecar.com All rights reserved. Site content cannot be copied or reproduced without permission.</p>
 
             </div>
@@ -114,8 +114,6 @@
 
     </footer>
 
-       
-    
         </div>
     </form>
 </body>
